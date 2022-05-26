@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ton</title>
+</head>
+<body>
+<h3>
+  รายชื่อ User ที่ติดต่อเข้ามา
+</h3>
+
+<ul>
+  <% cpis.forEach(function(cpi) { %>
+    <li>
+      <strong>
+        <%= cpi.Corporate_ID %>
+      </strong>
+      -
+      <%= cpi.Full_Name %>
+    </li>
+  <% }); %>
+</ul>
+  
+</body>
+</html>

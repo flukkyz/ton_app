@@ -1,0 +1,19 @@
+{
+  "name": "cmu_auth",
+  "version": "1.0.0",
+  "description": "auth for cmu OAuth",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "sequelize": "^6.3.5",
+    "tedious": "^9.2.3"
+  }
+}
