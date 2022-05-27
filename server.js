@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
-// const db = require('./models')
-// const Cpi = db.Cpi
+const db = require('./models')
+const Cpi = db.Cpi
 
 const { notFound, handleError } = require('./middlewares')
 
@@ -14,17 +14,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', async (req, res, next) => {
   try {
-    // const lists = await Cpi.findAll()
-    const lists = [
-      {
-        Full_Name: 'test1',
-        Corporate_ID: 1
-      },
-      {
-        Full_Name: 'test2',
-        Corporate_ID: 2
-      },
-    ]
+    const lists = await Cpi.findAll()
     return res.render('index', {
       cpis: lists
     });

@@ -6,14 +6,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Cpi.init({
+    Corporate_ID: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+    },
     Full_Name: DataTypes.STRING,
     Last_Name: DataTypes.STRING,
-    First_Name: DataTypes.STRING,
-    Corporate_ID: DataTypes.STRING
+    First_Name: DataTypes.STRING
   }, {
     sequelize,
     timestamps: false,
-    underscored: true,
     tableName: 'CTM_People_Inteligence',
     modelName: 'Cpi',
   })
